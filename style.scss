@@ -1,0 +1,124 @@
+:root {
+    --bg-color: #171B1D;
+    --text-color: white;
+    --about-color: white;
+    --airplane-color: white;
+    --trail-color: whitesmoke;
+}
+
+body {
+    position: relative;
+    background-color: var(--bg-color);
+    font-family: monospace;
+    transform: translate(0, 10%);
+    color: var(--text-color);
+    max-height: 100%;
+    margin: 1.5em 3.5em;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: var(--bg-color);
+    height: 100vh;
+    width: 50%;
+    z-index: 999;
+    text-transform: lowercase;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 5em;
+
+        a {
+            color: white;
+            padding: 1em 3em;
+            display: block;
+            width: 100%;
+            font-size: 1rem;
+
+            &:hover {
+                color: #D0D33C;
+                transform: translateY(-5%);
+            }
+        }
+    }
+
+    .close {
+        float: right;
+        margin-top: 1.5em;
+        margin-right: 2.1em;
+        width: 1em;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.open-nav {
+    transform: translateX(0%);
+}
+
+.main {
+    padding: 25px;
+}
+
+.about {
+    color: var(--about-color);
+}
+
+.title {
+    font-size: calc(40px + 2vmin);
+}
+
+.description {
+    margin: 0;
+}
+
+.links {
+    color: var(--text-color);
+
+    &::after {
+        content: "\a";
+        white-space: pre;
+    }
+}
+
+p, h2, a {
+    font-size: calc(10px + 2vmin);
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: .1em solid var(--about-color);
+    white-space: nowrap;
+    text-align: left;
+    width: 0;
+    animation: typing 1s steps(20, end) forwards, blink .8s infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 70% }
+}
+
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: var(--about-color); }
+}

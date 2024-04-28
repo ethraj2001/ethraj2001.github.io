@@ -1,0 +1,236 @@
+:root {
+    --bg-color: #171B1D;
+    --text-color: white;
+    --about-color: white;
+    --airplane-color: white;
+    --trail-color: whitesmoke;
+}
+
+body {
+    position: relative;
+    background-color: var(--bg-color);
+    font-family: monospace;
+    transform: translateY(10%);
+    color: var(--text-color);
+    margin: 2em 2em;
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--text-color); /* Ensure consistent text color */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: -1px 8px;
+    height: 8px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-logo {
+    flex-grow: 1;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    padding: 0 15px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #D0D33C;
+}
+
+header {
+    height: 4em;
+    background-color: var(--bg-color);
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+}
+
+header .menu {
+    float: right;
+    width: 2em;
+    margin-right: 6.5em;
+    margin-top: 1.32em;
+    z-index: 20;
+    cursor: pointer;
+}
+
+header .menu:hover {
+    transform: scale(1.1);
+}
+
+.overlay {
+    display: none;
+}
+
+.main {
+    padding: 25px;
+}
+
+.about {
+    color: var(--about-color);
+}
+
+.title {
+    font-size: calc(40px + 3vmin);
+}
+
+.description {
+    margin: 0;
+}
+
+.links::after {
+    content: "\a";
+    white-space: pre;
+}
+
+p, h2, a {
+    font-size: calc(10px + 2vmin);
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: .1em solid var(--about-color);
+    white-space: nowrap;
+    text-align: left;
+    width: 0;
+    animation: typing 1s steps(20, end) forwards, blink .8s infinite;
+}
+
+.container {
+    display: flex; /* Enables flexbox */
+    justify-content: space-between; /* Distributes space between the children */
+    align-items: flex-start; /* Aligns items at the start of the flex container */
+}
+
+.main {
+    flex: 1; /* Gives the divs flexibility to grow and take up equal space */
+    padding: 20px; /* Optional: Adds some space inside each div */
+}
+
+.content-container {
+    display: flex;
+    align-items: start; /* Adjust as needed */
+    justify-content: space-between;
+}
+
+.content {
+    flex: 1; /* Takes up the remaining space */
+    padding-right: 20px; /* Ensures some space between the text and the image */
+}
+
+.profile-picture {
+    flex: 0 0 200px; /* Does not grow, does not shrink, fixed width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensures the image is responsive */
+}
+
+.links-contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.content {
+    flex: 1; /* Take the remaining space */
+}
+
+.links-contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+@-webkit-keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.ticker-wrap {
+    position: relative;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 2rem;
+    background-color: var(--bg-color);
+    padding-left: 100%;
+}
+
+.ticker {
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+    white-space: nowrap;
+    padding-right: 100%;
+    -webkit-animation: ticker 30s linear infinite;
+    animation: ticker 30s linear infinite;
+}
+
+.ticker_item {
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 1rem;
+    color: white;
+}
+
+
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 80% }
+}
+
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: var(--about-color); }
+}
+
+
+
