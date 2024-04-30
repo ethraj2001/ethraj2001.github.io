@@ -87,15 +87,14 @@ a {
 header {
     line-height: 0px;
     background-color: var(--bg-color);
-    width: 100%;
-    z-index: 20;
+    top: 20px; 
+    z-index: 10;
     position: fixed;
 }
 
 header .menu {
     float: right;
     width: 2em;
-    margin-right: 6.5em;
     z-index: 0;
     cursor: pointer;
 }
