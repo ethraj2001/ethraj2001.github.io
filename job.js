@@ -8,12 +8,10 @@ window.onload = function() {
             document.body.classList.toggle('day-mode');
         } else {
             localStorage.setItem('theme', 'night');
-            document.body.classList.remove('day-mode');
             themeImage.src = 'assets/day-icon.png';
         }
     };
 };
-
 
 
 // let jobExperiences = [
