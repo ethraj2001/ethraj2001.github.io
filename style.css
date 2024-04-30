@@ -217,11 +217,12 @@ p, h2, a {
     width: 100%;
     overflow: hidden;
     height: 2rem;
-    background-color: var(--bg-color);
+    background-color: var(--about-color);
     padding-left: 100%;
 }
 
 .ticker {
+    color: var(--about-color);
     display: inline-block;
     height: 2rem;
     line-height: 2rem;
@@ -229,7 +230,6 @@ p, h2, a {
     padding-right: 100%;
     -webkit-animation: ticker 30s linear infinite;
     animation: ticker 30s linear infinite;
-    color: var(--about-color);
 }
 
 .ticker_item {
