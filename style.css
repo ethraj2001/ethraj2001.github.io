@@ -217,7 +217,7 @@ p, h2, a {
     width: 100%;
     overflow: hidden;
     height: 2rem;
-    background-color: var(--about-color);
+    background-color: var(--bg-color);
     padding-left: 100%;
 }
 
