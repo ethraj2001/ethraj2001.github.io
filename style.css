@@ -145,6 +145,7 @@ p, h2, a {
 
 .container {
     display: flex; /* Enables flexbox */
+    align-items: flex-start; /* Aligns items at the start of the flex container */
 }
 
 .main {
@@ -154,11 +155,13 @@ p, h2, a {
 
 .content-container {
     display: flex;
+    align-items: start; /* Adjust as needed */
+    justify-content: space-between;
 }
 
 .content {
     flex: 1; /* Takes up the remaining space */
-    padding-right: px; /* Ensures some space between the text and the image */
+    padding-right: 20px; /* Ensures some space between the text and the image */
 }
 
 .profile-picture {
