@@ -5,11 +5,11 @@ window.onload = function() {
 
     document.getElementById('themeToggle').onclick = function() {
         if (document.body.classList.contains('day-mode')) {
-            localStorage.setItem('theme', 'night');
-            document.body.classList.remove('day-mode');
-        } else {
             localStorage.setItem('theme', 'day');
             document.body.classList.add('day-mode');
+        } else {
+            localStorage.setItem('theme', 'night');
+            document.body.classList.remove('day-mode');
         }
         updateTheme();
     };
