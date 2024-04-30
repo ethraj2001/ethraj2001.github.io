@@ -6,13 +6,26 @@ window.onload = function() {
             localStorage.setItem('theme', 'day');
             themeImage.src = 'assets/night-icon.png';
             document.body.classList.add('day-mode');
+            updateTheme();
         } else {
             localStorage.setItem('theme', 'night');
             document.body.classList.remove('day-mode');
-            themeImage.src = 'assets/day-icon.png';
+            themeImage.src = 'assets/-icon.png';
+            updateTheme();
         }
+        
     };
+    function updateTheme() {
+        if (document.body.classList.contains('day-mode')) {
+            
+            themeImage.alt = 'Switch to Night Mode';
+        } else {
+            
+            themeImage.alt = 'Switch to Day Mode';
+        }
+    }
 };
+
 
 
 // let jobExperiences = [
