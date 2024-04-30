@@ -2,7 +2,7 @@
     --bg-color-night: #171B1D;
     --text-color-night: white;
     --about-color-night: white;
-    
+
     --bg-color-day: #FFFFFF; 
     --text-color-day: #333333; 
     --about-color-day: #333333; 
@@ -235,11 +235,8 @@ p, h2, a {
     display: inline-block;
     padding: 0 2rem;
     font-size: 1rem;
-    color: white;
+    color: var(--about-color);
 }
-
-
-
 
 @keyframes typing {
     from { width: 0 }
