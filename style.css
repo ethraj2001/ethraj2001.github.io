@@ -85,6 +85,7 @@ a {
 }
 
 header {
+    line-height: 0px;
     height: 4em;
     background-color: var(--bg-color);
     width: 100%;
