@@ -4,7 +4,20 @@
     --about-color: white;
     --airplane-color: white;
     --trail-color: whitesmoke;
+
+    --bg-color-day: #FFFFFF; 
+    --text-color-day: #333333; 
+    --about-color-day: #333333; 
+
 }
+
+.day-mode {
+    /* Variables for day mode */
+    --bg-color: var(--bg-color-day);
+    --text-color: var(--text-color-day);
+    --about-color: var(--about-color-day);
+}
+
 
 body {
     position: relative;
@@ -17,6 +30,9 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+
+
 
 .wrapper {
     overflow: hidden;
