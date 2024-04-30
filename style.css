@@ -162,7 +162,7 @@ p, h2, a {
 
 .content {
     flex: 1; /* Takes up the remaining space */
-    padding-right: 20px; /* Ensures some space between the text and the image */
+    padding-right: -25px; /* Ensures some space between the text and the image */
 }
 
 .profile-picture {
