@@ -52,6 +52,7 @@ a {
     align-items: center;
     background-color: var(--bg-color);
     padding: -1px 8px;
+    height: 8px;
     width: 100%;
     position: fixed;
     top: 0;
