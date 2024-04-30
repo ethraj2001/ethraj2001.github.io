@@ -85,19 +85,21 @@ a {
 }
 
 header {
-    line-height: 0px;
+    line-height: 1.5; /* Adjusted line height for better readability */
     background-color: var(--bg-color);
-    top: 20px; 
-    z-index: 10;
+    top: 0; /* Adjusted top position to remove extra space */
+    z-index: 100;
     position: fixed;
+    width: 100%; /* Added to ensure header spans the entire width */
 }
 
 header .menu {
     float: right;
     width: 2em;
-    z-index: 0;
+    z-index: 101; /* Increased z-index to ensure menu appears above header */
     cursor: pointer;
 }
+
 
 header .menu:hover {
     transform: scale(1.1);
