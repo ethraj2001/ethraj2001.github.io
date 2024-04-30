@@ -1,35 +1,30 @@
+// day and night mode
 window.onload = function() {
     const themeImage = document.getElementById('themeToggleImage');
-    // Check the stored theme in localStorage and set the initial theme and image
     if (localStorage.getItem('theme') === 'day') {
         document.body.classList.add('day-mode');
-        themeImage.src = 'assets/night-icon.png';
-        themeImage.alt = 'Switch to Night Mode';  // Correct the alt text for day mode
-    } else {
-        document.body.classList.remove('day-mode');
-        themeImage.src = 'assets/day-icon.png';
-        themeImage.alt = 'Switch to Day Mode';  // Ensure the alt text is correct for night mode
-    }
-};
-
-document.getElementById('themeToggle').addEventListener('click', function() {
-    const themeImage = document.getElementById('themeToggleImage');
-    // Toggle the class and update localStorage, image source, and alt text based on the current mode
-    if (document.body.classList.contains('day-mode')) {
-        document.body.classList.remove('day-mode');
-        localStorage.setItem('theme', 'night');
-        themeImage.src = 'assets/night-icon.png';
-        themeImage.alt = 'Switch to Day Mode';
-    } else {
-        document.body.classList.add('day-mode');
-        localStorage.setItem('theme', 'day');
-        themeImage.src = 'assets/day-icon.png';
+        themeImage.src = 'assets/night-icon.png'; 
         themeImage.alt = 'Switch to Night Mode';
+    } else {
+        document.body.classList.remove('day-mode');
+        themeImage.src = 'assets/day-icon.png';
+        themeImage.alt = 'Switch to Day Mode';
     }
-});
 
-
-
+    document.getElementById('themeToggle').onclick = function() {
+        if (document.body.classList.contains('day-mode')) {
+            localStorage.setItem('theme', 'night');
+            document.body.classList.remove('day-mode');
+            themeImage.src = 'assets/day-icon.png';
+            themeImage.alt = 'Switch to Day Mode';
+        } else {
+            localStorage.setItem('theme', 'day');
+            document.body.classList.add('day-mode');
+            themeImage.src = 'assets/night-icon.png';
+            themeImage.alt = 'Switch to Night Mode';
+        }
+    };
+};
 
 // let jobExperiences = [
 //     {   title: "UBC Chemistry Department",
