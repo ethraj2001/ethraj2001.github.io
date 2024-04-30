@@ -7,6 +7,7 @@ let transTheme = () => {
 };
 
 // Function to set the theme-specific highlighting
+// Function to set the theme-specific highlighting and icons
 let setHighlight = (theme) => {
   const themeImage = document.getElementById('themeToggleImage');
   const linkedinIcon = document.getElementById('linkedinIcon');
@@ -29,7 +30,7 @@ let setHighlight = (theme) => {
 
 // Main function to set the theme
 let setTheme = (theme) => {
-  transTheme();
+  transTheme(); // Apply CSS transition
   setHighlight(theme);
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
@@ -54,10 +55,8 @@ let initTheme = () => {
 // Event listener for DOMContentLoaded to ensure the DOM is fully loaded before running scripts
 document.addEventListener('DOMContentLoaded', () => {
   initTheme(); // Initialize the theme
-  const mode_toggle = document.getElementById("themeToggle");
-  mode_toggle.addEventListener("click", toggleTheme);
+  document.getElementById("themeToggle").addEventListener("click", toggleTheme);
 });
-
 
 
 // let jobExperiences = [
