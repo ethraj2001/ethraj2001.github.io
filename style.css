@@ -2,7 +2,6 @@
     --bg-color-night: #171B1D;
     --text-color-night: white;
     --about-color-night: white;
-
     --bg-color-day: #FFFFFF; 
     --text-color-day: #333333; 
     --about-color-day: #333333; 
@@ -10,7 +9,6 @@
 }
 
 .day-mode{
-    /* Variables for day mode */
     --bg-color: var(--bg-color-day);
     --text-color: var(--text-color-day);
     --about-color: var(--about-color-day);
@@ -33,8 +31,6 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
 }
-
-
 
 
 .wrapper {
