@@ -1,20 +1,20 @@
 // day and night mode 
-window.onload = function() {
+function toggleIcon() {
     const themeImage = document.getElementById('themeToggleImage');
-    updateTheme();
 
-    document.getElementById('themeToggle').onclick = function() {
-        if (document.body.classList.contains('day-mode')) {
-            localStorage.setItem('theme', 'day');
-            document.body.classList.add('day-mode');
-            themeImage.src = 'assets/night-icon.png';
-        } else {
-            localStorage.setItem('theme', 'night');
-            document.body.classList.remove('day-mode');
-            themeImage.src = 'assets/day-icon.png';
-        }
-    };
-};
+    // Toggle the theme based on the presence of an indicator class
+    if (document.body.classList.contains('day-mode')) {
+        document.body.classList.remove('day-mode');
+        themeImage.src = 'assets/day-icon.png';
+        themeImage.alt = 'Switch to Day Mode';
+    } else {
+        document.body.classList.add('day-mode');
+        themeImage.src = 'assets/night-icon.png';
+        themeImage.alt = 'Switch to Night Mode';
+    }
+}
+
+document.getElementById('themeToggle').onclick = toggleIcon;
 
 
 
