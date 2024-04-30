@@ -6,6 +6,7 @@ let transTheme = () => {
     }, 500); // Transition lasts 500 ms
   };
   
+
   // Function to set the theme-specific highlighting
   let setHighlight = (theme) => {
     const themeImage = document.getElementById('themeToggleImage');
