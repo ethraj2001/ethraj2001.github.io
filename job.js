@@ -37,11 +37,11 @@ document.getElementById('themeToggle').addEventListener('click', function() {
 //         },
 //         location: "University of British Columbia",
 //         responsibilities: [
-//           " Facilitate weekly lab sections for a diverse group of 24 students, ensuring a supportive and engaging learning environment",
-//           " Conduct regular office hours to address student questions and clarify misunderstandings related to course content, fostering a deeper understanding and academic success", 
-//           " Perform detailed demonstrations to train students on the proper and safe usage of lab equipment, enhancing their technical skills and practical understanding",
-//           " Evaluate and grade student assignments with a focus on providing timely, constructive feedback to encourage academic growth and improvement",
-//           " Maintain a high level of approachability and responsiveness, receiving consistently positive feedback from both students and faculty for contributions to the educational community"
+//           " Facilitated weekly lab sections for a diverse group of 24 students, ensuring a supportive and engaging learning environment",
+//           " Conducted regular office hours to address student questions and clarify misunderstandings related to course content, fostering a deeper understanding and academic success", 
+//           " Performed detailed demonstrations to train students on the proper and safe usage of lab equipment, enhancing their technical skills and practical understanding",
+//           " Evaluated and graded student assignments with a focus on providing timely, constructive feedback to encourage academic growth and improvement",
+//           " Maintained a high level of approachability and responsiveness, receiving consistently positive feedback from both students and faculty"
 //         ]        
 //     },
 //     {     title : "Dr. Roman Krems Group",
