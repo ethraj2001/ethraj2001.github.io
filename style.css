@@ -110,7 +110,7 @@ header .menu:hover {
 }
 
 .main {
-    padding: opx;
+    padding: 25px;
 }
 
 .about {
@@ -145,12 +145,13 @@ p, h2, a {
 
 .container {
     display: flex; /* Enables flexbox */
+    justify-content: space-between; /* Distributes space between the children */
     align-items: flex-start; /* Aligns items at the start of the flex container */
 }
 
 .main {
     flex: 1; /* Gives the divs flexibility to grow and take up equal space */
-    padding: 0px; /* Optional: Adds some space inside each div */
+    padding: 20px; /* Optional: Adds some space inside each div */
 }
 
 .content-container {
@@ -218,7 +219,6 @@ p, h2, a {
     height: 2rem;
     background-color: var(--bg-color);
     padding-left: 100%;
-    
 }
 
 .ticker {
@@ -235,7 +235,7 @@ p, h2, a {
     display: inline-block;
     padding: 0 2rem;
     font-size: 1rem;
-    color: var(--text-color); 
+    color: var(--text-color)
 }
 
 @keyframes typing {
