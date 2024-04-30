@@ -1,22 +1,21 @@
 // day and night mode 
-function toggleIcon() {
-    const themeImage = document.getElementById('themeToggleImage');
+window.onload = function() {
+    document.getElementById('themeToggle').onclick = toggleIcon; // Correctly assign the function
 
-    // Toggle the theme based on the presence of an indicator class
-    if (document.body.classList.contains('day-mode')) {
-        document.body.classList.remove('day-mode');
-        themeImage.src = 'assets/day-icon.png';
-        themeImage.alt = 'Switch to Day Mode';
-    } else {
-        document.body.classList.add('day-mode');
-        themeImage.src = 'assets/night-icon.png';
-        themeImage.alt = 'Switch to Night Mode';
+    function toggleIcon() {
+        const themeImage = document.getElementById('themeToggleImage');
+        // Toggle the icon and alt text based on the current theme
+        if (document.body.classList.contains('day-mode')) {
+            document.body.classList.remove('day-mode');
+            themeImage.src = 'assets/day-icon.png';
+            themeImage.alt = 'Switch to Day Mode';
+        } else {
+            document.body.classList.add('day-mode');
+            themeImage.src = 'assets/night-icon.png';
+            themeImage.alt = 'Switch to Night Mode';
+        }
     }
-}
-
-document.getElementById('themeToggle').onclick = toggleIcon;
-
-
+};
 
 
 // let jobExperiences = [
