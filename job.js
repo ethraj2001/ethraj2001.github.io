@@ -1,30 +1,58 @@
 // day and night mode
-
-window.onload = function() {
+let transTheme = () => {
+    document.documentElement.classList.add("transition");
+    window.setTimeout(() => {
+      document.documentElement.classList.remove("transition");
+    }, 500); // Transition lasts 500 ms
+  };
+  
+  // Function to set the theme-specific highlighting
+  let setHighlight = (theme) => {
     const themeImage = document.getElementById('themeToggleImage');
-   
-    document.getElementById('themeToggle').onclick = function() {
-        if (document.body.classList.contains('day-mode')) {
-            localStorage.setItem('theme', 'night');
-            document.body.classList.remove('day-mode');
-            updateTheme();
-        } else {
-            localStorage.setItem('theme', 'day');
-            document.body.classList.add('day-mode');
-            updateTheme();
-        }
-    };
-
-    function updateTheme() {
-        if (document.body.classList.contains('day-mode')) {
-            themeImage.src = 'assets/night-icon.png';
-            themeImage.alt = 'Switch to Night Mode';
-        } else {
-            themeImage.src = 'assets/day-icon.png';
-            themeImage.alt = 'Switch to Day Mode';
-        }
+    if (theme === "dark") {
+      document.documentElement.classList.remove("day-mode");
+      themeImage.src = 'assets/day-icon.png'; // Display icon to switch to day mode
+      themeImage.alt = 'Switch to Day Mode';
+    } else {
+      document.documentElement.classList.add("day-mode");
+      themeImage.src = 'assets/night-icon.png'; // Display icon to switch to night mode
+      themeImage.alt = 'Switch to Night Mode';
     }
-};
+  };
+  
+
+
+  // Main function to set the theme
+  let setTheme = (theme) => {
+    transTheme();
+    setHighlight(theme);
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  };
+  
+  // Function to toggle between light and dark themes
+  let toggleTheme = () => {
+    let currentTheme = localStorage.getItem("theme") === "dark" ? "light" : "dark";
+    setTheme(currentTheme);
+  };
+  
+  // Function to initialize the theme based on user preference or saved theme
+  let initTheme = () => {
+    let theme = localStorage.getItem("theme");
+    if (!theme) {
+      const userPref = window.matchMedia('(prefers-color-scheme: dark)');
+      theme = userPref.matches ? 'dark' : 'light';
+    }
+    setTheme(theme);
+  };
+  
+  // Event listener for DOMContentLoaded to ensure the DOM is fully loaded before running scripts
+  document.addEventListener('DOMContentLoaded', () => {
+    initTheme(); // Initialize the theme
+    const mode_toggle = document.getElementById("themeToggle");
+    mode_toggle.addEventListener("click", toggleTheme);
+  });
+  
 
 
 
