@@ -222,7 +222,6 @@ p, h2, a {
 }
 
 .ticker {
-    color: var(--about-color);
     display: inline-block;
     height: 2rem;
     line-height: 2rem;
@@ -233,10 +232,10 @@ p, h2, a {
 }
 
 .ticker_item {
+    color: var(--about-color);
     display: inline-block;
     padding: 0 2rem;
     font-size: 1rem;
-    color: var(--about-color);
 }
 
 @keyframes typing {
