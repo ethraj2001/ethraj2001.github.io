@@ -95,7 +95,6 @@ header {
 
 header .menu {
     float: right;
-    width: 2em;
     z-index: 101; /* Increased z-index to ensure menu appears above header */
     cursor: pointer;
 }
