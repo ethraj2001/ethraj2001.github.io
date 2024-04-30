@@ -1,58 +1,62 @@
 // day and night mode
 let transTheme = () => {
-    document.documentElement.classList.add("transition");
-    window.setTimeout(() => {
-      document.documentElement.classList.remove("transition");
-    }, 500); // Transition lasts 500 ms
-  };
-  
-  // Function to set the theme-specific highlighting
-  let setHighlight = (theme) => {
-    const themeImage = document.getElementById('themeToggleImage');
-    if (theme === "dark") {
-      document.documentElement.classList.remove("day-mode");
-      themeImage.src = 'assets/day-icon.png'; // Display icon to switch to day mode
-      themeImage.alt = 'Switch to Day Mode';
-    } else {
-      document.documentElement.classList.add("day-mode");
-      themeImage.src = 'assets/night-icon.png'; // Display icon to switch to night mode
-      themeImage.alt = 'Switch to Night Mode';
-    }
-  };
-  
+  document.documentElement.classList.add("transition");
+  window.setTimeout(() => {
+    document.documentElement.classList.remove("transition");
+  }, 500); // Transition lasts 500 ms
+};
 
+// Function to set the theme-specific highlighting
+let setHighlight = (theme) => {
+  const themeImage = document.getElementById('themeToggleImage');
+  const linkedinIcon = document.getElementById('linkedinIcon');
+  const githubIcon = document.getElementById('githubIcon');
 
-  // Main function to set the theme
-  let setTheme = (theme) => {
-    transTheme();
-    setHighlight(theme);
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  };
-  
-  // Function to toggle between light and dark themes
-  let toggleTheme = () => {
-    let currentTheme = localStorage.getItem("theme") === "dark" ? "light" : "dark";
-    setTheme(currentTheme);
-  };
-  
-  // Function to initialize the theme based on user preference or saved theme
-  let initTheme = () => {
-    let theme = localStorage.getItem("theme");
-    if (!theme) {
-      const userPref = window.matchMedia('(prefers-color-scheme: dark)');
-      theme = userPref.matches ? 'dark' : 'light';
-    }
-    setTheme(theme);
-  };
-  
-  // Event listener for DOMContentLoaded to ensure the DOM is fully loaded before running scripts
-  document.addEventListener('DOMContentLoaded', () => {
-    initTheme(); // Initialize the theme
-    const mode_toggle = document.getElementById("themeToggle");
-    mode_toggle.addEventListener("click", toggleTheme);
-  });
-  
+  if (theme === "dark") {
+    document.documentElement.classList.remove("day-mode");
+    themeImage.src = 'assets/day-icon.png'; // Display icon to switch to day mode
+    themeImage.alt = 'Switch to Day Mode';
+    linkedinIcon.src = 'assets/linkedin-dark-icon.png'; // LinkedIn icon for dark mode
+    githubIcon.src = 'assets/github-dark-icon.png'; // GitHub icon for dark mode
+  } else {
+    document.documentElement.classList.add("day-mode");
+    themeImage.src = 'assets/night-icon.png'; // Display icon to switch to night mode
+    themeImage.alt = 'Switch to Night Mode';
+    linkedinIcon.src = 'assets/linkedin-light-icon.png'; // LinkedIn icon for light mode
+    githubIcon.src = 'assets/github-light-icon.png'; // GitHub icon for light mode
+  }
+};
+
+// Main function to set the theme
+let setTheme = (theme) => {
+  transTheme();
+  setHighlight(theme);
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+};
+
+// Function to toggle between light and dark themes
+let toggleTheme = () => {
+  let currentTheme = localStorage.getItem("theme") === "dark" ? "light" : "dark";
+  setTheme(currentTheme);
+};
+
+// Function to initialize the theme based on user preference or saved theme
+let initTheme = () => {
+  let theme = localStorage.getItem("theme");
+  if (!theme) {
+    const userPref = window.matchMedia('(prefers-color-scheme: dark)');
+    theme = userPref.matches ? 'dark' : 'light';
+  }
+  setTheme(theme);
+};
+
+// Event listener for DOMContentLoaded to ensure the DOM is fully loaded before running scripts
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme(); // Initialize the theme
+  const mode_toggle = document.getElementById("themeToggle");
+  mode_toggle.addEventListener("click", toggleTheme);
+});
 
 
 
