@@ -52,7 +52,6 @@ a {
     align-items: center;
     background-color: var(--bg-color);
     padding: -1px 8px;
-    height: 8px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -88,7 +87,7 @@ header {
     height: 4em;
     background-color: var(--bg-color);
     width: 100%;
-    z-index: 20;
+    z-index: 10;
     position: fixed;
 }
 
@@ -144,7 +143,7 @@ p, h2, a {
 }
 
 .container {
-    display: inline-block; 
+    display: flex; /* Enables flexbox */
 }
 
 .main {
@@ -153,12 +152,12 @@ p, h2, a {
 }
 
 .content-container {
-    display: inline-block;
+    display: flex;
 }
 
 .content {
     flex: 1; /* Takes up the remaining space */
-    padding-right: 0px; /* Ensures some space between the text and the image */
+    padding-right: px; /* Ensures some space between the text and the image */
 }
 
 .profile-picture {
@@ -174,7 +173,6 @@ p, h2, a {
 }
 .content {
     flex: 1; /* Take the remaining space */
-
 }
 
 .links-contact-container {
