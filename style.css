@@ -229,6 +229,7 @@ p, h2, a {
     padding-right: 100%;
     -webkit-animation: ticker 30s linear infinite;
     animation: ticker 30s linear infinite;
+    color: var(--about-color);
 }
 
 .ticker_item {
