@@ -86,11 +86,10 @@ a {
 
 header {
     line-height: 0px;
-    height: 4em;
     background-color: var(--bg-color);
     width: 100%;
     z-index: 10;
-    position: fixed;
+    position: relative;
 }
 
 header .menu {
