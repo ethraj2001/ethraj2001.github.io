@@ -249,3 +249,66 @@ p, h2, a {
 }
 
 
+@media (max-width: 768px) {
+    body {
+        margin: 1em;
+        font-size: 90%; /* Reduce the font-size for the entire body */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+        height: auto; /* Make the navbar taller, as items stack vertically */
+    }
+
+    .navbar-logo {
+        margin-bottom: 10px; /* Add space between logo and nav links on mobile */
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%; /* Make links full width */
+    }
+
+    .navbar-links li {
+        padding: 5px 0; /* Add more vertical padding to each link */
+    }
+
+    .main, .content, .content-container {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .profile-picture {
+        flex: 1 0 auto; /* Allow the image to adjust to the container width */
+        max-width: 90%; /* Reduce the max-width to fit mobile screens */
+        margin: 0 auto; /* Center align the image */
+    }
+
+    .title, .subtitle, p, h2, a {
+        font-size: calc(12px + 2vmin); /* Adjust font sizes to be more responsive */
+    }
+
+    .ticker-wrap {
+        height: auto; /* Adjust the ticker wrapper to be more responsive */
+        padding-left: 0;
+    }
+
+    .ticker {
+        font-size: smaller; /* Reduce the font size of the ticker */
+        padding-right: 0;
+
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 80% }
+    }
+
+    @keyframes blink {
+        from { border-color: transparent; }
+        to { border-color: var(--about-color); }
+    }
+}
