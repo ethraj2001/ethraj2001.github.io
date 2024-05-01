@@ -35,8 +35,6 @@ body {
 }
 
 
-
-
 .wrapper {
     overflow: hidden;
 }
@@ -48,13 +46,14 @@ a {
 }
 
 .navbar {
+    position: fixed;
     display: flex;
     align-items: center;
+    right: 0;
+    top: 0;
     background-color: var(--bg-color);
-    padding: -1px 8px;
     height: 8px;
-    width: 100%;
-    position: fixed;
+    width: 50%;
     top: 0;
     z-index: 10;
 }
@@ -71,7 +70,7 @@ a {
 }
 
 .navbar-links li {
-    padding: 0 15px;
+    padding: 0 0px;
 }
 
 .navbar-links a {
@@ -249,7 +248,7 @@ p, h2, a {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     body {
         margin: 1em;
         font-size: 90%; /* Reduce the font-size for the entire body */
@@ -283,12 +282,12 @@ p, h2, a {
 
     .profile-picture {
         flex: 1 0 auto; /* Allow the image to adjust to the container width */
-        max-width: 90%; /* Reduce the max-width to fit mobile screens */
+        max-width: 80%; /* Reduce the max-width to fit mobile screens */
         margin: 0 auto; /* Center align the image */
     }
 
-    .title, .subtitle, p, h2, a {
-        font-size: calc(12px + 2vmin); /* Adjust font sizes to be more responsive */
+    .title, .subtitle, p, h1, a {
+        font-size: 10px /* Adjust font sizes to be more responsive */
     }
 
     .ticker-wrap {
