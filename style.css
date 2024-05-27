@@ -25,7 +25,7 @@
 body {
     position: relative;
     background-color: var(--bg-color);
-    font-family: monospace;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transform: translateY(10%);
     color: var(--text-color);
     margin: 2em 2em;
