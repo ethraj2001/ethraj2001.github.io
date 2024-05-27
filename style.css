@@ -226,8 +226,8 @@ p, h2, a {
     line-height: 2rem;
     white-space: nowrap;
     padding-right: 100%;
-    -webkit-animation: ticker 30s linear infinite;
-    animation: ticker 30s linear infinite;
+    -webkit-animation: ticker 35s linear infinite;
+    animation: ticker 35s linear infinite;
 }
 
 .ticker_item {
